@@ -1,0 +1,191 @@
+:root {
+  /* Light canvas and neutral text for high contrast on white */
+  --theme-bg-canvas: #FFFFFF;
+  --theme-bg-elevated: #FFFFFF;
+  --theme-bg-elev-1: #FFFFFF;
+  --theme-bg-elev-2: #F7FAFC; /* soft gray for light cards if needed */
+  --theme-bg-elev-3: #F2F5F8;
+  --theme-bg-sidebar: #FFFFFF;
+
+  --theme-text-primary: #111827;   /* near-black for strong contrast */
+  --theme-text-secondary: #374151; /* dark gray for secondary text */
+  --theme-text-muted: #6B7280;     /* muted copy */
+
+  --theme-icon-muted: #6B7280;
+
+  --theme-border-subtle: #E5E7EB;
+  --theme-border-strong: #D1D5DB;
+
+  /* Brand accents adapted for light mode */
+  --theme-primary-600: #2D6FB3;  /* from Vlinder palette */
+  --theme-primary-500: #4A90D9;
+  --theme-primary-400: #74AEE6;
+  --theme-primary-300: #9CC5EE;
+  --theme-primary-200: #C8D1FF;
+  --theme-primary-50:  #EAF2F8;
+
+  --theme-accent: var(--theme-primary-600);
+  --theme-accent-strong: var(--theme-primary-600);
+
+  /* Semantic */
+  --theme-success: #16A34A;
+  --theme-warning: #D97706;
+  --theme-danger:  #B91C1C;
+  --theme-info:    #2563EB;
+
+  /* Buttons */
+  --theme-btn-primary-fg: #FFFFFF;
+  --theme-btn-primary-bg: var(--theme-primary-600);
+  --theme-btn-primary-hover: #255f96;
+  --theme-btn-primary-press: #1f507f;
+
+  --theme-btn-ghost-fg: #1F2937; /* neutral dark text */
+  --theme-btn-ghost-hover-bg: #F3F4F6;
+
+  /* Focus */
+  --theme-focus-ring: #60A5FA;
+
+  /* Generic fallbacks (align with light) */
+  --bg-canvas: var(--theme-bg-canvas);
+  --bg-elevated: var(--theme-bg-elevated);
+  --bg-muted: var(--theme-bg-elev-2);
+
+  --text-primary: var(--theme-text-primary);
+  --text-secondary: var(--theme-text-secondary);
+  --text-inverted: #FFFFFF;
+  --text-link: #0B63B1;
+
+  /* Accents used in slides content */
+  --accent-primary: var(--theme-primary-600);
+  --accent-primary-600: var(--theme-primary-600);
+  --accent-primary-400: var(--theme-primary-400);
+  --accent-secondary: #17D1D4; /* light cyan accent */
+  --accent-warm: #E63946;      /* refined red for badges/headers */
+
+  /* Gradients tuned for light background (very subtle) */
+  --grad-primary: linear-gradient(135deg, rgba(45,111,179,0.18), rgba(74,144,217,0.14));
+  --grad-hero: radial-gradient(900px 400px at 60% -10%, rgba(74,144,217,0.10), rgba(0,0,0,0));
+
+  /* Aliases from key_challenges assets for consistency */
+  --accent-blue: #1C95D3;
+  --accent-blue-dark: #1076AF;
+  --accent-cyan: #3EC1CF;
+
+  --badge-bg-warm: #FFF4F3;
+  --badge-border-warm: #FFB1A5;
+
+  --pill-blue-bg: #E6F3FB;
+  --pill-blue-strong-bg: #D9EEFB;
+  --pill-blue-text: #0A68A1;
+
+  --line-subtle: var(--theme-border-subtle);
+  --line: var(--theme-border-subtle);
+  --line-strong: var(--theme-border-strong);
+}
+
+/* Apply white canvas globally with high contrast text */
+:root, html, body, .slidev-root, .slidev-page, .slidev-layout, .slidev-layout.current {
+  background: var(--theme-bg-canvas) !important;
+  color: var(--theme-text-primary);
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Cards on white: remove heavy shadows and dark fills */
+.card,
+.feature-card,
+.problem-card,
+.stat-card,
+.time-card,
+.glass-frame {
+  background: #FFFFFF;
+  border: 1px solid var(--theme-border-subtle);
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.06); /* light, professional shadow */
+}
+
+/* Remove dark-specific accent bars; keep thin, subtle brand line */
+.feature-card::before,
+.problem-card::before {
+  background: var(--accent-primary);
+  opacity: 0.22;
+}
+
+/* Links and interactive elements tuned for light background */
+a, .accent {
+  color: var(--text-link);
+  text-decoration: none;
+}
+a:hover { color: #0a5698; text-decoration: underline; }
+
+/* Buttons refined for light canvas */
+.button, .btn-primary {
+  background: var(--theme-btn-primary-bg);
+  color: var(--theme-btn-primary-fg);
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(45, 111, 179, 0.20);
+}
+.button:hover, .btn-primary:hover { background: var(--theme-btn-primary-hover); transform: translateY(-1px); }
+.button:active, .btn-primary:active { background: var(--theme-btn-primary-press); transform: translateY(0); }
+.btn-secondary {
+  background: #FFFFFF;
+  color: var(--theme-btn-ghost-fg);
+  border: 1px solid var(--theme-border-subtle);
+}
+.btn-secondary:hover { background: var(--theme-btn-ghost-hover-bg); }
+
+/* Hero/title slide cleanup for white */
+.title-slide {
+  background: #FFFFFF;
+  text-align: center;
+}
+.title-slide .subtitle { color: var(--theme-text-secondary); }
+.with-hero-glow::before {
+  background: var(--grad-hero);
+  filter: blur(1px);
+}
+
+/* Typography colors for readability on white */
+p, li { color: var(--theme-text-secondary); }
+.muted, .subtle { color: var(--theme-text-muted); }
+h1, h2, h3, h4 { color: var(--theme-text-primary); }
+
+/* Code blocks on white */
+code, pre code, .slidev-code {
+  background: #F8FAFC !important;
+  color: #0F172A !important;
+  border: 1px solid var(--theme-border-subtle);
+}
+
+/* Timeline line and dots on light */
+.timeline::before {
+  background: #E5E7EB;
+}
+.time-dot {
+  background: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(74,144,217,0.18);
+}
+.time-dot.future {
+  background: #9CA3AF;
+  box-shadow: 0 0 0 4px rgba(156,163,175,0.18);
+}
+
+/* CTA band subtle color wash suitable for white background */
+.cta-band {
+  background: linear-gradient(180deg, rgba(74,144,217,0.08), rgba(116,174,230,0.06));
+  border: 1px solid var(--theme-border-subtle);
+}
+
+/* Key challenges slide alignment with light theme */
+.slidev-layout.key-challenges {
+  background: #FFFFFF;
+  color: var(--theme-text-primary);
+}
+
+/* Utilities on white */
+.placeholder {
+  border: 1px dashed var(--theme-border-subtle);
+  color: var(--theme-text-muted);
+  background: #FFFFFF;
+}

@@ -16,21 +16,18 @@ css: |
 ---
 
 # Vlinder x Shell
-<div class="title-slide with-hero-glow" style="padding-top: 24px;">
+<div class="title-slide with-hero-glow" style="padding-top: 24px; background:#FFFFFF;">
   <img src="/attachments/20250916_101743_Vlinder_new_logo_transparent_2.png" alt="Vlinder Logo" class="logo" style="height:64px; margin-bottom: 8px;" />
-
-  <div class="hero-copy" style="max-width: 960px; margin: 0 auto;">
-    <h2 class="text-hero" style="margin: 6px 0 2px 0;">Authenticity & Carbon Intelligence</h2>
-    <p class="subtitle text-md" style="margin: 4px 0 16px 0; color: var(--theme-text-secondary);">
+  <div class="hero-copy" style="max-width: 900px; margin: 0 auto;">
+    <h2 class="text-hero" style="margin: 6px 0 8px 0; color: var(--theme-text-primary);">Authenticity & Carbon Intelligence</h2>
+    <p class="subtitle text-md" style="margin: 0 0 16px 0; color: var(--theme-text-secondary);">
       Protect brand integrity and quantify carbon with verifiable, real-time intelligence
     </p>
-
     <div class="hero-ctas mt-2" style="display:flex; gap: 12px; justify-content: center;">
       <button class="btn-primary">Get Started</button>
       <button class="btn-secondary">Learn More</button>
     </div>
-
-    <div class="subtitle text-xs" style="margin-top: 10px; color: var(--theme-text-secondary);">
+    <div class="subtitle text-xs" style="margin-top: 12px; color: var(--theme-text-muted);">
       Vlinder Labs • for Shell | Presenter: Team Vlinder • Date
     </div>
   </div>
@@ -42,48 +39,10 @@ css: |
 
 ---
 css: |
-  /* Light canvas and Vlinder palette for this slide only */
-  :root {
-    /* Base */
-    --bg-canvas: #FFFFFF;
-    --primary-text: #222222;
-    --muted-text: #4B5563;
-
-    /* Gemini red headline tone */
-    --accent-red: #E63946;
-    --accent-red-deep: #C92A34;
-
-    /* Vlinder palette (from assets/vlinder_logo_color_palette.md) */
-    --vlinder-blue-600: #2D6FB3;
-    --vlinder-blue-500: #4A90D9;
-    --vlinder-blue-400: #74AEE6;
-    --vlinder-blue-300: #9CC5EE;
-
-    --vlinder-ink-900: #0E1921;
-    --vlinder-ink-800: #1C2A36;
-
-    --vlinder-offwhite: #EAF2F8;
-    --vlinder-white: #FFFFFF;
-
-    --vlinder-canvas-dark: #000000;
-
-    /* Utility accents */
-    --accent-blue: #1C95D3;
-    --accent-blue-dark: #1076AF;
-    --accent-cyan: #3EC1CF;
-
-    --border-gray: #E5E7EB;
-    --badge-bg-warm: #FFE9E1;
-    --badge-border-warm: #FFB99F;
-
-    --pill-blue-bg: #E6F3FB;
-    --pill-blue-strong-bg: #D9EEFB;
-    --pill-blue-text: #0A68A1;
-  }
-
+  /* Key Challenges on white canvas — use global light tokens, only ensure sizing/spacing */
   .slidev-layout.key-challenges {
-    background: var(--bg-canvas);
-    color: var(--primary-text);
+    background: var(--theme-bg-canvas);
+    color: var(--theme-text-primary);
     font-family: Inter, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.35;
   }
@@ -395,11 +354,12 @@ A unified platform to authenticate products and trace carbon across the lifecycl
 
 ```mermaid
 %%{init: {
-  "theme": "dark",
+  "theme": "neutral",
   "themeVariables": {
-    "primaryTextColor": "#E6EDF3",
-    "primaryColor": "#0B1220",
-    "lineColor": "#6E7681"
+    "primaryTextColor": "#111827",
+    "primaryColor": "#FFFFFF",
+    "lineColor": "#9CA3AF",
+    "tertiaryColor": "#F3F4F6"
   }
 }}%%
 
@@ -414,12 +374,12 @@ flowchart TD
     API --> Emissions
     UI[🖥️ Field & Web Apps] --> API
 
-    style UI fill:#1C1A2B,stroke:#4A90D9
-    style API fill:#1C1A2B,stroke:#4A90D9
-    style PackID fill:#1C1A2B,stroke:#4A90D9
-    style Emissions fill:#1C1A2B,stroke:#2D6FB3
-    style Records fill:#2B2931,stroke:#74AEE6
-    style Analytics fill:#2B2931,stroke:#FFC75A
+    style UI fill:#FFFFFF,stroke:#4A90D9,stroke-width:2px,color:#111827
+    style API fill:#FFFFFF,stroke:#4A90D9,stroke-width:2px,color:#111827
+    style PackID fill:#FFFFFF,stroke:#4A90D9,stroke-width:2px,color:#111827
+    style Emissions fill:#FFFFFF,stroke:#2D6FB3,stroke-width:2px,color:#111827
+    style Records fill:#FFFFFF,stroke:#74AEE6,stroke-width:2px,color:#111827
+    style Analytics fill:#FFFFFF,stroke:#FFC75A,stroke-width:2px,color:#111827
 ```
 
 ---

@@ -1,7 +1,7 @@
 :root {
-  /* Core dark palette — neutral blue/purple accent */
-  --theme-bg-canvas: #1A1B1F;       /* dark charcoal canvas */
-  --theme-bg-elevated: #21222A;     /* cards/surfaces */
+  /* Retain defaults but do not enforce dark canvas; light.css will override core tokens */
+  --theme-bg-canvas: #1A1B1F;
+  --theme-bg-elevated: #21222A;
   --theme-bg-elev-1: #21222A;
   --theme-bg-elev-2: #282931;
   --theme-bg-elev-3: #2F3039;
@@ -15,7 +15,6 @@
   --theme-border-subtle: #34353A;
   --theme-border-strong: #43444A;
 
-  /* Primary brand – Blue/Purple */
   --theme-primary-600: #5B6FDB;
   --theme-primary-500: #6B7FEB;
   --theme-primary-400: #8B9FFB;
@@ -23,17 +22,14 @@
   --theme-primary-200: #C8D1FF;
   --theme-primary-50:  #EEF0FF;
 
-  /* Accent aliases for backwards compatibility */
   --theme-accent: var(--theme-primary-500);
   --theme-accent-strong: var(--theme-primary-600);
 
-  /* Semantic */
   --theme-success: #40D79E;
   --theme-warning: #FFC75A;
   --theme-danger:  #FF6B6B;
   --theme-info:    #6EB9FF;
 
-  /* Controls */
   --theme-btn-primary-fg: #1A1B1F;
   --theme-btn-primary-bg: var(--theme-primary-500);
   --theme-btn-primary-hover: var(--theme-primary-600);
@@ -45,16 +41,13 @@
   --theme-chip-active-bg: var(--theme-bg-elev-3);
   --theme-chip-active-fg: var(--theme-text-primary);
 
-  /* Focus and overlays */
   --theme-focus-ring: var(--theme-primary-400);
   --theme-overlay-ambient: linear-gradient(180deg, rgba(107,127,235,0.18) 0%, rgba(0,0,0,0) 55%);
 
-  /* Lines (generic fallbacks still supported) */
   --line-subtle: var(--theme-border-subtle);
   --line: var(--theme-border-subtle);
   --line-strong: var(--theme-border-strong);
 
-  /* Deprecated/legacy tokens retained as fallbacks to new ones */
   --bg-canvas: var(--theme-bg-canvas);
   --bg-elevated: var(--theme-bg-elevated);
   --bg-muted: var(--theme-bg-elev-2);
@@ -64,26 +57,23 @@
   --text-inverted: #0D0F14;
   --text-link: var(--theme-primary-300);
 
-  /* Accent family retained for charts and cool highlights if needed */
   --accent-primary: var(--theme-primary-500);
   --accent-primary-600: var(--theme-primary-600);
   --accent-primary-400: var(--theme-primary-400);
   --accent-secondary: #17D1D4;
   --accent-warm: #FF5C8A;
 
-  /* Gradients: primary brand */
   --grad-primary: linear-gradient(135deg, var(--theme-primary-600) 0%, var(--theme-primary-400) 50%, var(--theme-primary-300) 100%);
   --grad-hero: radial-gradient(1200px 600px at 60% -10%, rgba(107,127,235,0.22) 0%, rgba(139,159,251,0.15) 35%, rgba(26,27,31,0) 70%);
 }
 
-/* Base */
+/* Base: do not force dark here; light.css overrides background to white globally */
 :root, html, body, .slidev-root, .slidev-page, .slidev-layout, .slidev-layout.current {
   background: var(--theme-bg-canvas) !important;
   color: var(--theme-text-primary);
   font-family: Inter, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Ensure slide canvas supports vertical scroll when content overflows */
 .slidev-page {
   overflow-y: auto;
   overflow-x: hidden;
@@ -93,7 +83,7 @@ body, .slidev-layout {
   color: var(--theme-text-primary);
 }
 
-/* Optional subtle hero glow */
+/* Optional subtle hero glow (kept, tuned by light.css) */
 .with-hero-glow {
   position: relative;
   overflow: visible;

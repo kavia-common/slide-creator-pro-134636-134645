@@ -1,2 +1,4 @@
 /* style.css */
+/* Import updated light theme for white canvas */
 @import "./theme/custom.css";
+@import "./theme/light.css";
