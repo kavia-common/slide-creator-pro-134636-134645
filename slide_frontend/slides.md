@@ -40,6 +40,7 @@ css: |
 
 # Key Challenges (Vlinder)
 
+---
 css: |
   /* Light canvas and Vlinder palette for this slide only */
   :root {
@@ -259,8 +260,8 @@ css: |
   @media (max-width: 767px) {
     .kc-wrap { padding: 32px 24px; }
   }
-
 class: "key-challenges"
+---
 
 <!-- Layout -->
 <div class="kc-wrap" role="region" aria-label="Key challenges two-column layout">
@@ -492,7 +493,7 @@ flowchart TD
     <div class="stat-label">Carbon Data Coverage</div>
   </div>
   <div class="stat-card">
-    <div class="stat-number"><6w</div>
+    <div class="stat-number">&lt;6w</div>
     <div class="stat-label">Time-to-Value</div>
   </div>
   <div class="stat-card">
