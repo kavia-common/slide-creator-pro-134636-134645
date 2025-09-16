@@ -572,3 +572,272 @@ class: text-center
 Questions?
 
 <div class="mt-4 subtle">Press S for presenter mode • Press E to open editor • Use arrow keys to navigate</div>
+
+---
+
+# Key Challenges (Vlinder)
+
+css: |
+  /* Light canvas and Vlinder palette for this slide only */
+  :root {
+    /* Base */
+    --bg-canvas: #FFFFFF;
+    --primary-text: #222222;
+    --muted-text: #4B5563;
+
+    /* Gemini red headline tone */
+    --accent-red: #E63946;
+    --accent-red-deep: #C92A34;
+
+    /* Vlinder palette */
+    --vlinder-blue-600: #2D6FB3;
+    --vlinder-blue-500: #4A90D9;
+    --vlinder-blue-400: #74AEE6;
+    --vlinder-blue-300: #9CC5EE;
+
+    --vlinder-ink-900: #0E1921;
+    --vlinder-ink-800: #1C2A36;
+
+    --vlinder-offwhite: #EAF2F8;
+    --vlinder-white: #FFFFFF;
+
+    --vlinder-canvas-dark: #000000;
+
+    /* Mapped utility accents (from design notes) */
+    --accent-blue: #1C95D3;
+    --accent-blue-dark: #1076AF;
+    --accent-cyan: #3EC1CF;
+
+    --border-gray: #E5E7EB;
+    --badge-bg-warm: #FFE9E1;
+    --badge-border-warm: #FFB99F;
+
+    --pill-blue-bg: #E6F3FB;
+    --pill-blue-strong-bg: #D9EEFB;
+    --pill-blue-text: #0A68A1;
+  }
+
+  .slidev-layout.key-challenges {
+    background: var(--bg-canvas);
+    color: var(--primary-text);
+    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.35;
+  }
+
+  .kc-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 48px;
+  }
+
+  .kc-header {
+    text-align: center;
+    color: var(--accent-red);
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin: 12px 0 32px 0;
+  }
+
+  .kc-grid {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr; /* left | gutter | right */
+    align-items: start;
+  }
+
+  .kc-col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* Warm section badge */
+  .kc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--badge-bg-warm);
+    border: 1px solid var(--badge-border-warm);
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: var(--accent-red);
+    font-weight: 800;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+
+  /* Left large stat */
+  .kc-stat {
+    color: var(--primary-text);
+  }
+  .kc-stat .num {
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+  .kc-stat .desc {
+    margin-top: 6px;
+    font-size: 13.5px;
+    font-weight: 700;
+  }
+  .kc-stat .mark {
+    background: var(--badge-bg-warm);
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+
+  /* Monetary impact line */
+  .kc-money {
+    color: var(--primary-text);
+    font-size: 16px;
+  }
+  .kc-money b {
+    font-weight: 800;
+  }
+  .kc-money .annual {
+    background: #FADDD4;
+    color: #8B2A1E;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+
+  /* Bullets with colored dots */
+  .kc-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+  }
+  .kc-bullets li {
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    gap: 8px;
+    color: var(--muted-text);
+    font-size: 14.5px;
+  }
+  .kc-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 7px;
+  }
+  .kc-dot.cyan { background: var(--accent-cyan); }
+  .kc-dot.teal { background: #1DA29A; } /* from design notes */
+  .kc-dot.blue { background: var(--accent-blue-dark); }
+
+  /* Right column – emission stat */
+  .kc-emiss {
+    color: var(--primary-text);
+  }
+  .kc-emiss .line1 {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+  .kc-emiss .line1 small {
+    font-size: 19px;
+    font-weight: 800;
+  }
+  .kc-emiss .caption {
+    font-size: 12.5px;
+    color: var(--muted-text);
+    font-weight: 700;
+    margin-top: 4px;
+  }
+
+  .kc-subtitle {
+    font-weight: 800;
+    color: var(--primary-text);
+    margin-top: 2px;
+  }
+
+  /* Progress pills */
+  .kc-pills {
+    display: grid;
+    gap: 8px;
+  }
+  .kc-pill {
+    background: var(--pill-blue-bg);
+    color: var(--pill-blue-text);
+    font-weight: 800;
+    font-size: 13.5px;
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+  .kc-pill.strong {
+    background: var(--pill-blue-strong-bg);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1023px) {
+    .kc-wrap { padding: 40px 32px; }
+    .kc-grid { grid-template-columns: 1fr; row-gap: 24px; }
+    .kc-header { font-size: 24px; }
+    .kc-stat .num { font-size: 38px; }
+    .kc-emiss .line1 { font-size: 27px; }
+  }
+  @media (max-width: 767px) {
+    .kc-wrap { padding: 32px 24px; }
+  }
+
+class: "key-challenges"
+
+<!-- Layout -->
+<div class="kc-wrap">
+  <div class="kc-header">KEY CHALLENGES</div>
+
+  <div class="kc-grid">
+    <!-- LEFT COLUMN -->
+    <div class="kc-col" aria-labelledby="left-badge">
+      <div id="left-badge" class="kc-badge">THE COUNTERFEIT CRISIS</div>
+
+      <div class="kc-stat" aria-label="Counterfeit rate">
+        <div class="num">10%</div>
+        <div class="desc">of Global Lubricants <span class="mark">Are Counterfeit</span></div>
+      </div>
+
+      <div class="kc-money">
+        <b>$1.8 TRILLION</b> annual global counterfeiting cost.<span class="annual">annual</span>
+      </div>
+
+      <ul class="kc-bullets">
+        <li><span class="kc-dot cyan" aria-hidden="true"></span><span>20% market penetration in key regions</span></li>
+        <li><span class="kc-dot teal" aria-hidden="true"></span><span>20% market penetration in key regions</span></li>
+        <li><span class="kc-dot blue" aria-hidden="true"></span><span><b>INR 5,500 CRORE</b> counterfeit market in India alone</span></li>
+        <li><span class="kc-dot cyan" aria-hidden="true"></span><span>Shell also faces significant counterfeiting in Rajasthan, Gujarat & Southern states</span></li>
+      </ul>
+    </div>
+
+    <div></div> <!-- gutter -->
+
+    <!-- RIGHT COLUMN -->
+    <div class="kc-col" aria-labelledby="right-badge">
+      <div id="right-badge" class="kc-badge" role="img" aria-label="carbon tracking icon">CARBON TRACKING COMPLEXITY</div>
+
+      <div class="kc-emiss" aria-label="Emissions headline">
+        <div class="line1">1.2 BILLION <small>TONS CO2e</small></div>
+        <div class="caption">Shell’s annual emissions (2024)</div>
+      </div>
+
+      <ul class="kc-bullets" aria-label="Carbon tracking pain points">
+        <li><span class="kc-dot blue" aria-hidden="true"></span><span>Energy-intensive production processes</span></li>
+        <li><span class="kc-dot blue" aria-hidden="true"></span><span>Lack of standardized carbon measurement across supply chain</span></li>
+        <li><span class="kc-dot blue" aria-hidden="true"></span><span>Complex visibility gaps from sourcing to end-use</span></li>
+      </ul>
+
+      <div class="kc-subtitle">Shell’s Current Progress:</div>
+      <div class="kc-pills" role="list">
+        <div class="kc-pill" role="listitem">30% carbon intensity reduction since 2016</div>
+        <div class="kc-pill strong" role="listitem">700,000 TONNES CO2e offset annually</div>
+        <div class="kc-pill" role="listitem">50% renewable energy in blending plants</div>
+      </div>
+    </div>
+  </div>
+</div>
