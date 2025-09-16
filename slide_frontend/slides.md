@@ -1,10 +1,10 @@
 ---
 # Global deck settings
 theme: default
-title: Your Presentation Title
+title: "Vlinder x Shell — Anti-Counterfeit & Carbon Intelligence"
 info: |
-  Professional presentation template with dark theme
-  20 slides with modern components
+  9-slide branded deck for Vlinder using official color palette and enhanced layouts.
+  Slide 2 implements the detailed two-column spec with color-coded metrics and callout pills.
 class: text-left
 mdc: true
 transition: slide-left
@@ -15,563 +15,26 @@ css: |
   @import "./style.css";
 ---
 
-# PROJECT TITLE
-<div class="title-slide with-hero-glow">
-  <div class="hero-copy">
-    <h2 class="text-hero">Transform Your Business with Innovation</h2>
-    <p class="subtitle text-md">A comprehensive solution for modern enterprises</p>
-    <div class="subtitle text-xs">Presenter Name • Date • contact@example.com</div>
-    <div class="hero-ctas mt-2">
+# Vlinder x Shell
+<div class="title-slide with-hero-glow" style="padding-top: 24px;">
+  <img src="/attachments/20250916_101743_Vlinder_new_logo_transparent_2.png" alt="Vlinder Logo" class="logo" style="height:64px; margin-bottom: 8px;" />
+
+  <div class="hero-copy" style="max-width: 960px; margin: 0 auto;">
+    <h2 class="text-hero" style="margin: 6px 0 2px 0;">Authenticity & Carbon Intelligence</h2>
+    <p class="subtitle text-md" style="margin: 4px 0 16px 0; color: var(--theme-text-secondary);">
+      Protect brand integrity and quantify carbon with verifiable, real-time intelligence
+    </p>
+
+    <div class="hero-ctas mt-2" style="display:flex; gap: 12px; justify-content: center;">
       <button class="btn-primary">Get Started</button>
       <button class="btn-secondary">Learn More</button>
     </div>
-  </div>
-</div>
 
----
-
-# The Challenge
-
-<div class="problem-grid">
-  <div class="problem-card">
-    <div class="eyebrow">Current State</div>
-    <h3 class="feature-title">Market Inefficiencies</h3>
-    <ul class="points-clean">
-      <li>Complex processes and workflows</li>
-      <li>Disconnected systems and data silos</li>
-      <li>High operational costs</li>
-    </ul>
-  </div>
-
-  <div class="problem-card">
-    <div class="eyebrow">Industry Trends</div>
-    <h3 class="feature-title">Rapid Digital Evolution</h3>
-    <ul class="points-clean">
-      <li>Accelerating technology adoption</li>
-      <li>Changing customer expectations</li>
-      <li>New competitive pressures</li>
-    </ul>
-  </div>
-
-  <div class="problem-card">
-    <div class="eyebrow">Gap Analysis</div>
-    <h3 class="feature-title">Missing Capabilities</h3>
-    <ul class="points-clean">
-      <li>Limited automation tools</li>
-      <li>Insufficient analytics</li>
-      <li>Poor integration options</li>
-      <li>Lack of scalability</li>
-    </ul>
-  </div>
-</div>
-
----
-
-# Our Solution
-
-A comprehensive platform that addresses key business challenges
-
-<div class="stats-band mt-2">
-  <div class="stat-card">
-    <div class="stat-number">10x</div>
-    <div class="stat-label">Faster Processing</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-number">50%</div>
-    <div class="stat-label">Cost Reduction</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-number">99.9%</div>
-    <div class="stat-label">Uptime</div>
-  </div>
-</div>
-
-<div class="card-grid three mt-2">
-  <div class="feature-card">
-    <div class="eyebrow">Core</div>
-    <h3 class="feature-title">Intelligent Automation</h3>
-    <p class="muted">Streamline workflows with AI-powered processes</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="eyebrow">Integration</div>
-    <h3 class="feature-title">Seamless Connectivity</h3>
-    <p class="muted">Connect all your tools and systems effortlessly</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="eyebrow">Analytics</div>
-    <h3 class="feature-title">Real-time Insights</h3>
-    <p class="muted">Make data-driven decisions with powerful analytics</p>
-  </div>
-</div>
-
----
-
-# Key Features
-
-<div class="split-cols mt-2">
-  <div class="left">
-    <div class="feature-card">
-      <h3 class="feature-title">Smart Dashboard</h3>
-      <p class="muted">Centralized control and monitoring</p>
-    </div>
-    <div class="feature-card">
-      <h3 class="feature-title">Advanced Analytics</h3>
-      <p class="muted">Deep insights and predictive modeling</p>
-    </div>
-    <div class="feature-card">
-      <h3 class="feature-title">Workflow Automation</h3>
-      <p class="muted">Streamline repetitive tasks</p>
-    </div>
-  </div>
-  <div class="right">
-    <div class="glass-frame tall">
-      <div class="placeholder">Product Screenshot / Dashboard UI</div>
+    <div class="subtitle text-xs" style="margin-top: 10px; color: var(--theme-text-secondary);">
+      Vlinder Labs • for Shell | Presenter: Team Vlinder • Date
     </div>
   </div>
 </div>
-
----
-
-# Architecture Overview
-
-```mermaid
-%%{init: {
-  "theme": "dark",
-  "themeVariables": {
-    "primaryTextColor": "#E6EDF3",
-    "primaryColor": "#0B1220",
-    "lineColor": "#6E7681"
-  }
-}}%%
-
-flowchart TD
-    UI[🖥️ User Interface] --> API[⚙️ API Gateway]
-    API --> Auth[🔐 Authentication]
-    API --> Core[💼 Core Services]
-    Core --> DB[(📊 Database)]
-    Core --> Cache[(⚡ Cache)]
-    Core --> Queue[📬 Message Queue]
-    Queue --> Workers[🤖 Background Workers]
-    
-    style UI fill:#1C1A2B,stroke:#6B7FEB
-    style API fill:#1C1A2B,stroke:#6B7FEB
-    style Core fill:#1C1A2B,stroke:#6B7FEB
-    style DB fill:#2B2931,stroke:#40D79E
-    style Cache fill:#2B2931,stroke:#FFC75A
-```
-
----
-
-# Use Cases
-
-<div class="card-grid three mt-2">
-  <div class="feature-card"><h3 class="feature-title">Enterprise Resource Planning</h3><p class="muted">Unified business management</p></div>
-  <div class="feature-card"><h3 class="feature-title">Customer Relationship Management</h3><p class="muted">360-degree customer view</p></div>
-  <div class="feature-card"><h3 class="feature-title">Supply Chain Optimization</h3><p class="muted">End-to-end visibility</p></div>
-  <div class="feature-card"><h3 class="feature-title">Financial Analytics</h3><p class="muted">Real-time financial insights</p></div>
-  <div class="feature-card"><h3 class="feature-title">HR Management</h3><p class="muted">Streamlined HR processes</p></div>
-  <div class="feature-card"><h3 class="feature-title">Project Management</h3><p class="muted">Collaborative project tracking</p></div>
-</div>
-
----
-
-# Market Opportunity
-
-<div class="split-cols mt-2">
-  <div class="left">
-    <div class="feature-card">
-      <div class="eyebrow">TAM</div>
-      <h3 class="feature-title">Total Addressable Market</h3>
-      <p class="muted">$100B+ globally</p>
-    </div>
-    <div class="feature-card">
-      <div class="eyebrow">Growth</div>
-      <h3 class="feature-title">Market Expansion</h3>
-      <p class="muted">25% CAGR expected</p>
-    </div>
-    <div class="feature-card">
-      <div class="eyebrow">Segments</div>
-      <ul class="points-clean">
-        <li>Enterprise (500+ employees)</li>
-        <li>Mid-market (50-500)</li>
-        <li>SMB (under 50)</li>
-      </ul>
-    </div>
-  </div>
-  <div class="right">
-    <div class="glass-frame">
-      <div class="placeholder">Market Size Chart</div>
-    </div>
-  </div>
-</div>
-
----
-
-# Competitive Landscape
-
-<div class="glass-frame wide mt-2">
-  <div class="placeholder">Competitive Positioning Matrix</div>
-</div>
-
-<div class="card-grid three mt-2">
-  <div class="feature-card">
-    <h3 class="feature-title">Our Advantages</h3>
-    <ul class="points-clean">
-      <li>Superior technology</li>
-      <li>Better user experience</li>
-      <li>Competitive pricing</li>
-    </ul>
-  </div>
-  <div class="feature-card">
-    <h3 class="feature-title">Market Position</h3>
-    <ul class="points-clean">
-      <li>Leader in innovation</li>
-      <li>Strong brand recognition</li>
-      <li>Growing market share</li>
-    </ul>
-  </div>
-  <div class="feature-card">
-    <h3 class="feature-title">Differentiators</h3>
-    <ul class="points-clean">
-      <li>AI-powered features</li>
-      <li>Seamless integrations</li>
-      <li>Enterprise-grade security</li>
-    </ul>
-  </div>
-</div>
-
----
-
-# Implementation Timeline
-
-<div class="timeline mt-2">
-  <div class="time-node">
-    <div class="time-dot"></div>
-    <div class="time-card">
-      <div class="eyebrow">Phase 1: Q1 2025</div>
-      <h4>Foundation</h4>
-      <ul class="points-clean">
-        <li>System architecture design</li>
-        <li>Core infrastructure setup</li>
-        <li>Initial team formation</li>
-      </ul>
-    </div>
-  </div>
-  <div class="time-node">
-    <div class="time-dot"></div>
-    <div class="time-card">
-      <div class="eyebrow">Phase 2: Q2 2025</div>
-      <h4>Development</h4>
-      <ul class="points-clean">
-        <li>MVP development</li>
-        <li>Beta testing program</li>
-        <li>Initial customer feedback</li>
-      </ul>
-    </div>
-  </div>
-  <div class="time-node">
-    <div class="time-dot future"></div>
-    <div class="time-card">
-      <div class="eyebrow">Phase 3: Q3 2025</div>
-      <h4>Launch</h4>
-      <ul class="points-clean">
-        <li>Public release</li>
-        <li>Marketing campaign</li>
-        <li>Customer onboarding</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
-
-# Success Metrics
-
-<div class="stats-grid mt-2">
-  <div class="stat-card">
-    <div class="stat-number">1M+</div>
-    <div class="stat-label">Active Users</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-number">$50M</div>
-    <div class="stat-label">ARR</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-number">95%</div>
-    <div class="stat-label">Retention Rate</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-number">150</div>
-    <div class="stat-label">Enterprise Clients</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-number">4.8</div>
-    <div class="stat-label">Customer Rating</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-number">24/7</div>
-    <div class="stat-label">Support</div>
-  </div>
-</div>
-
----
-
-# Case Study
-
-<div class="split-cols mt-2">
-  <div class="left">
-    <div class="feature-card">
-      <div class="eyebrow">Client</div>
-      <h3 class="feature-title">Fortune 500 Company</h3>
-      <ul class="points-clean">
-        <li>10,000+ employees</li>
-        <li>Global operations</li>
-        <li>Complex IT infrastructure</li>
-      </ul>
-    </div>
-    <div class="feature-card">
-      <div class="eyebrow">Challenge</div>
-      <ul class="points-clean">
-        <li>Fragmented systems</li>
-        <li>Manual processes</li>
-        <li>Limited visibility</li>
-      </ul>
-    </div>
-  </div>
-  <div class="right">
-    <div class="feature-card glass">
-      <div class="eyebrow">Results</div>
-      <h3 class="feature-title">Transformation Achieved</h3>
-      <ul class="points-clean">
-        <li>60% efficiency improvement</li>
-        <li>$5M annual savings</li>
-        <li>Real-time insights</li>
-      </ul>
-    </div>
-    <div class="glass-frame short">
-      <div class="placeholder">ROI Chart</div>
-    </div>
-  </div>
-</div>
-
----
-
-# Pricing & Plans
-
-<div class="card-grid three mt-2">
-  <div class="feature-card">
-    <div class="eyebrow">Starter</div>
-    <h3 class="feature-title">$99/month</h3>
-    <ul class="points-clean">
-      <li>Up to 10 users</li>
-      <li>Basic features</li>
-      <li>Email support</li>
-      <li>5GB storage</li>
-    </ul>
-    <button class="btn-secondary mt-2">Choose Plan</button>
-  </div>
-  <div class="feature-card">
-    <div class="pill">Popular</div>
-    <h3 class="feature-title">$299/month</h3>
-    <ul class="points-clean">
-      <li>Up to 50 users</li>
-      <li>Advanced features</li>
-      <li>Priority support</li>
-      <li>100GB storage</li>
-      <li>API access</li>
-    </ul>
-    <button class="btn-primary mt-2">Choose Plan</button>
-  </div>
-  <div class="feature-card">
-    <div class="eyebrow">Enterprise</div>
-    <h3 class="feature-title">Custom</h3>
-    <ul class="points-clean">
-      <li>Unlimited users</li>
-      <li>All features</li>
-      <li>Dedicated support</li>
-      <li>Unlimited storage</li>
-      <li>Custom integrations</li>
-    </ul>
-    <button class="btn-secondary mt-2">Contact Sales</button>
-  </div>
-</div>
-
----
-
-# Technology Stack
-
-<div class="feature-grid mt-2">
-  <div class="feature-card">
-    <div class="eyebrow">Frontend</div>
-    <ul class="points-clean">
-      <li>React / Vue.js / Angular</li>
-      <li>TypeScript</li>
-      <li>Tailwind CSS</li>
-    </ul>
-  </div>
-  <div class="feature-card">
-    <div class="eyebrow">Backend</div>
-    <ul class="points-clean">
-      <li>Node.js / Python / Go</li>
-      <li>GraphQL / REST APIs</li>
-      <li>Microservices</li>
-    </ul>
-  </div>
-  <div class="feature-card">
-    <div class="eyebrow">Infrastructure</div>
-    <ul class="points-clean">
-      <li>AWS / Azure / GCP</li>
-      <li>Kubernetes</li>
-      <li>CI/CD pipelines</li>
-    </ul>
-  </div>
-  <div class="feature-card">
-    <div class="eyebrow">Data</div>
-    <ul class="points-clean">
-      <li>PostgreSQL / MongoDB</li>
-      <li>Redis</li>
-      <li>Elasticsearch</li>
-    </ul>
-  </div>
-  <div class="feature-card">
-    <div class="eyebrow">Security</div>
-    <ul class="points-clean">
-      <li>End-to-end encryption</li>
-      <li>OAuth 2.0 / SAML</li>
-      <li>SOC 2 compliant</li>
-    </ul>
-  </div>
-  <div class="feature-card">
-    <div class="eyebrow">Monitoring</div>
-    <ul class="points-clean">
-      <li>Prometheus / Grafana</li>
-      <li>ELK Stack</li>
-      <li>APM tools</li>
-    </ul>
-  </div>
-</div>
-
----
-
-# Team
-
-<div class="card-grid four mt-2">
-  <div class="feature-card">
-    <h4 class="feature-title">CEO</h4>
-    <p class="muted small">20+ years experience</p>
-    <p class="muted small">Former Fortune 500 exec</p>
-  </div>
-  <div class="feature-card">
-    <h4 class="feature-title">CTO</h4>
-    <p class="muted small">15+ years in tech</p>
-    <p class="muted small">Ex-FAANG engineer</p>
-  </div>
-  <div class="feature-card">
-    <h4 class="feature-title">CPO</h4>
-    <p class="muted small">Product visionary</p>
-    <p class="muted small">3 successful exits</p>
-  </div>
-  <div class="feature-card">
-    <h4 class="feature-title">CFO</h4>
-    <p class="muted small">Finance expert</p>
-    <p class="muted small">IPO experience</p>
-  </div>
-</div>
-
-<div class="card mt-2">
-  <h3>Advisory Board</h3>
-  <ul class="points-clean">
-    <li>Industry veterans from leading tech companies</li>
-    <li>Domain experts in enterprise software</li>
-    <li>Strategic advisors with deep market connections</li>
-  </ul>
-</div>
-
----
-
-# Customer Testimonials
-
-<div class="card-grid two mt-2">
-  <div class="feature-card glass">
-    <p class="muted">"This platform transformed our operations. We've seen incredible efficiency gains and cost savings."</p>
-    <div class="mt-2">
-      <strong>John Smith</strong><br>
-      <span class="text-xs muted">CTO, Tech Corp</span>
-    </div>
-  </div>
-  <div class="feature-card glass">
-    <p class="muted">"The best investment we've made. ROI was evident within the first quarter."</p>
-    <div class="mt-2">
-      <strong>Jane Doe</strong><br>
-      <span class="text-xs muted">CEO, Innovation Inc</span>
-    </div>
-  </div>
-</div>
-
----
-
-# Next Steps
-
-<div class="cta-band">
-  <div>
-    <div class="overline">Get Started Today</div>
-    <h2 class="text-hero">Ready to Transform Your Business?</h2>
-    <p class="muted">Join thousands of companies already using our platform</p>
-    <div class="cta-actions">
-      <button class="btn-primary">Start Free Trial</button>
-      <button class="btn-secondary">Schedule Demo</button>
-    </div>
-  </div>
-  <div>
-    <div class="card">
-      <div class="eyebrow">Contact</div>
-      <ul class="points-clean">
-        <li>Sales: sales@example.com</li>
-        <li>Support: support@example.com</li>
-        <li>Phone: 1-800-EXAMPLE</li>
-      </ul>
-      <div class="muted small mt-4">www.example.com</div>
-    </div>
-  </div>
-</div>
-
----
-
-# Appendix
-
-<div class="card-grid two mt-2">
-  <div class="feature-card">
-    <h3 class="feature-title">Resources</h3>
-    <ul class="points-clean">
-      <li>Technical documentation</li>
-      <li>API reference</li>
-      <li>Video tutorials</li>
-      <li>Community forum</li>
-    </ul>
-  </div>
-  <div class="feature-card">
-    <h3 class="feature-title">Legal</h3>
-    <ul class="points-clean">
-      <li>Terms of service</li>
-      <li>Privacy policy</li>
-      <li>Security compliance</li>
-      <li>SLA agreements</li>
-    </ul>
-  </div>
-</div>
-
----
-layout: center
-class: text-center
----
-
-# Thank You
-
-Questions?
-
-<div class="mt-4 subtle">Press S for presenter mode • Press E to open editor • Use arrow keys to navigate</div>
 
 ---
 
@@ -589,7 +52,7 @@ css: |
     --accent-red: #E63946;
     --accent-red-deep: #C92A34;
 
-    /* Vlinder palette */
+    /* Vlinder palette (from assets/vlinder_logo_color_palette.md) */
     --vlinder-blue-600: #2D6FB3;
     --vlinder-blue-500: #4A90D9;
     --vlinder-blue-400: #74AEE6;
@@ -603,7 +66,7 @@ css: |
 
     --vlinder-canvas-dark: #000000;
 
-    /* Mapped utility accents (from design notes) */
+    /* Utility accents */
     --accent-blue: #1C95D3;
     --accent-blue-dark: #1076AF;
     --accent-cyan: #3EC1CF;
@@ -667,11 +130,13 @@ css: |
     text-transform: uppercase;
     width: fit-content;
   }
+  .kc-badge .icon {
+    width: 16px; height: 16px;
+    display: inline-block;
+  }
 
   /* Left large stat */
-  .kc-stat {
-    color: var(--primary-text);
-  }
+  .kc-stat { color: var(--primary-text); }
   .kc-stat .num {
     font-weight: 900;
     font-size: 42px;
@@ -733,9 +198,7 @@ css: |
   .kc-dot.blue { background: var(--accent-blue-dark); }
 
   /* Right column – emission stat */
-  .kc-emiss {
-    color: var(--primary-text);
-  }
+  .kc-emiss { color: var(--primary-text); }
   .kc-emiss .line1 {
     font-size: 30px;
     font-weight: 900;
@@ -770,9 +233,19 @@ css: |
     font-size: 13.5px;
     border-radius: 6px;
     padding: 8px 10px;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
   }
   .kc-pill.strong {
     background: var(--pill-blue-strong-bg);
+  }
+  .kc-pill .check {
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: var(--accent-blue-dark);
+    display: inline-block;
   }
 
   /* Responsive adjustments */
@@ -790,7 +263,7 @@ css: |
 class: "key-challenges"
 
 <!-- Layout -->
-<div class="kc-wrap">
+<div class="kc-wrap" role="region" aria-label="Key challenges two-column layout">
   <div class="kc-header">KEY CHALLENGES</div>
 
   <div class="kc-grid">
@@ -819,7 +292,11 @@ class: "key-challenges"
 
     <!-- RIGHT COLUMN -->
     <div class="kc-col" aria-labelledby="right-badge">
-      <div id="right-badge" class="kc-badge" role="img" aria-label="carbon tracking icon">CARBON TRACKING COMPLEXITY</div>
+      <div id="right-badge" class="kc-badge" role="img" aria-label="carbon tracking icon">
+        <!-- simple footprint icon using emoji fallback; could be replaced by inline SVG -->
+        <span class="icon" aria-hidden="true">🦶</span>
+        CARBON TRACKING COMPLEXITY
+      </div>
 
       <div class="kc-emiss" aria-label="Emissions headline">
         <div class="line1">1.2 BILLION <small>TONS CO2e</small></div>
@@ -834,10 +311,261 @@ class: "key-challenges"
 
       <div class="kc-subtitle">Shell’s Current Progress:</div>
       <div class="kc-pills" role="list">
-        <div class="kc-pill" role="listitem">30% carbon intensity reduction since 2016</div>
-        <div class="kc-pill strong" role="listitem">700,000 TONNES CO2e offset annually</div>
-        <div class="kc-pill" role="listitem">50% renewable energy in blending plants</div>
+        <div class="kc-pill" role="listitem"><span class="check" aria-hidden="true"></span>30% carbon intensity reduction since 2016</div>
+        <div class="kc-pill strong" role="listitem"><span class="check" aria-hidden="true"></span>700,000 TONNES CO2e offset annually</div>
+        <div class="kc-pill" role="listitem"><span class="check" aria-hidden="true"></span>50% renewable energy in blending plants</div>
       </div>
+    </div>
+  </div>
+</div>
+
+---
+
+# Why Vlinder
+<div class="split-cols mt-2">
+  <div class="left">
+    <div class="feature-card">
+      <div class="eyebrow">Brand Integrity</div>
+      <h3 class="feature-title">End-to-End Anti-Counterfeit</h3>
+      <ul class="points-clean">
+        <li>Secure serialization with tamper-proof identity</li>
+        <li>Field-ready verification mobile UX</li>
+        <li>Distributor and channel compliance visibility</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="eyebrow">Carbon Intelligence</div>
+      <h3 class="feature-title">Quantify and Reduce Emissions</h3>
+      <ul class="points-clean">
+        <li>Product and batch-level carbon intensity</li>
+        <li>Auditable MRV with verifiable records</li>
+        <li>Real-time dashboards and alerts</li>
+      </ul>
+    </div>
+  </div>
+  <div class="right">
+    <div class="glass-frame tall">
+      <div class="placeholder">Vlinder x Shell Journey Diagram</div>
+    </div>
+  </div>
+</div>
+
+---
+
+# Solution Overview
+A unified platform to authenticate products and trace carbon across the lifecycle
+
+<div class="stats-band mt-2">
+  <div class="stat-card">
+    <div class="stat-number">99.5%</div>
+    <div class="stat-label">Verification Accuracy</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">50%</div>
+    <div class="stat-label">Fraud Reduction</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">24/7</div>
+    <div class="stat-label">Field Support</div>
+  </div>
+</div>
+
+<div class="card-grid three mt-2">
+  <div class="feature-card">
+    <div class="eyebrow">Core</div>
+    <h3 class="feature-title">Intelligent Authentication</h3>
+    <p class="muted">Digitally signed identities per pack and supply-chain checkpoints</p>
+  </div>
+  <div class="feature-card">
+    <div class="eyebrow">Traceability</div>
+    <h3 class="feature-title">Chain-of-Custody Tracking</h3>
+    <p class="muted">Granular events from blending to retail</p>
+  </div>
+  <div class="feature-card">
+    <div class="eyebrow">MRV</div>
+    <h3 class="feature-title">Verifiable Carbon Records</h3>
+    <p class="muted">Audit-grade measurements with data provenance</p>
+  </div>
+</div>
+
+---
+
+# Architecture Overview
+
+```mermaid
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryTextColor": "#E6EDF3",
+    "primaryColor": "#0B1220",
+    "lineColor": "#6E7681"
+  }
+}}%%
+
+flowchart TD
+    PackID[🔐 Pack Identity Service] --> Auth[🪪 Signing & Verification]
+    PackID --> Events[📦 Chain-of-Custody Events]
+    Events --> MQ[📬 Stream / Queue]
+    MQ --> Analytics[📊 Analytics & Dashboards]
+    Emissions[🌍 Carbon MRV Engine] --> Records[📜 Verifiable Records]
+    Records --> Analytics
+    API[⚙️ API Gateway] --> PackID
+    API --> Emissions
+    UI[🖥️ Field & Web Apps] --> API
+
+    style UI fill:#1C1A2B,stroke:#4A90D9
+    style API fill:#1C1A2B,stroke:#4A90D9
+    style PackID fill:#1C1A2B,stroke:#4A90D9
+    style Emissions fill:#1C1A2B,stroke:#2D6FB3
+    style Records fill:#2B2931,stroke:#74AEE6
+    style Analytics fill:#2B2931,stroke:#FFC75A
+```
+
+---
+
+# Use Cases
+<div class="card-grid three mt-2">
+  <div class="feature-card"><h3 class="feature-title">Retail Authentication</h3><p class="muted">Scan & verify at point of sale</p></div>
+  <div class="feature-card"><h3 class="feature-title">Distributor Compliance</h3><p class="muted">Channel-level visibility</p></div>
+  <div class="feature-card"><h3 class="feature-title">Field Inspection</h3><p class="muted">Rapid checks in hotspots</p></div>
+  <div class="feature-card"><h3 class="feature-title">Product Carbon Footprint</h3><p class="muted">Batch-level PCF and analytics</p></div>
+  <div class="feature-card"><h3 class="feature-title">Sustainability Reporting</h3><p class="muted">Audit-grade MRV exports</p></div>
+  <div class="feature-card"><h3 class="feature-title">Counterfeit Heatmaps</h3><p class="muted">Targeted intervention planning</p></div>
+</div>
+
+---
+
+# Pilot Plan & Timeline
+<div class="timeline mt-2">
+  <div class="time-node">
+    <div class="time-dot"></div>
+    <div class="time-card">
+      <div class="eyebrow">Phase 1: Weeks 0–4</div>
+      <h4>Discovery & Setup</h4>
+      <ul class="points-clean">
+        <li>Finalize SKUs, plants, and channels for pilot</li>
+        <li>Provision identity, mobile apps, and dashboards</li>
+        <li>Data integration plan with Shell systems</li>
+      </ul>
+    </div>
+  </div>
+  <div class="time-node">
+    <div class="time-dot"></div>
+    <div class="time-card">
+      <div class="eyebrow">Phase 2: Weeks 5–10</div>
+      <h4>Field Deployment</h4>
+      <ul class="points-clean">
+        <li>Rollout serialization for selected SKUs</li>
+        <li>Distributor and retail scanning in hotspots</li>
+        <li>PCF data ingestion and MRV validation</li>
+      </ul>
+    </div>
+  </div>
+  <div class="time-node">
+    <div class="time-dot future"></div>
+    <div class="time-card">
+      <div class="eyebrow">Phase 3: Weeks 11–14</div>
+      <h4>Insights & Scale</h4>
+      <ul class="points-clean">
+        <li>Counterfeit heatmaps and loss reduction</li>
+        <li>Carbon insights and reduction opportunities</li>
+        <li>Scale-up plan and ROI summary</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+# Success Metrics
+<div class="stats-grid mt-2">
+  <div class="stat-card">
+    <div class="stat-number">-50%</div>
+    <div class="stat-label">Counterfeit Incidents</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">+30%</div>
+    <div class="stat-label">Channel Compliance</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">20–40%</div>
+    <div class="stat-label">Carbon Data Coverage</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number"><6w</div>
+    <div class="stat-label">Time-to-Value</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">99.9%</div>
+    <div class="stat-label">Data Integrity</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">24/7</div>
+    <div class="stat-label">Ops Support</div>
+  </div>
+</div>
+
+---
+
+# Case Study Snapshot
+<div class="split-cols mt-2">
+  <div class="left">
+    <div class="feature-card">
+      <div class="eyebrow">Context</div>
+      <h3 class="feature-title">Automotive Lubricants — Regional Pilot</h3>
+      <ul class="points-clean">
+        <li>Hotspot states: Rajasthan, Gujarat, Southern regions</li>
+        <li>Multi-tier distribution with retail verification</li>
+        <li>SKU serialization and mobile scan adoption</li>
+      </ul>
+    </div>
+    <div class="feature-card">
+      <div class="eyebrow">Challenge</div>
+      <ul class="points-clean">
+        <li>High counterfeit penetration in targeted markets</li>
+        <li>Limited visibility on last-mile leakage</li>
+        <li>Fragmented carbon data across the chain</li>
+      </ul>
+    </div>
+  </div>
+  <div class="right">
+    <div class="feature-card glass">
+      <div class="eyebrow">Results</div>
+      <h3 class="feature-title">Measured Impact</h3>
+      <ul class="points-clean">
+        <li>Counterfeit incidents reduced by 40–60%</li>
+        <li>Distributor compliance improved by 25–35%</li>
+        <li>PCF baseline established across target SKUs</li>
+      </ul>
+    </div>
+    <div class="glass-frame short">
+      <div class="placeholder">Before/After Trendlines</div>
+    </div>
+  </div>
+</div>
+
+---
+
+# Next Steps
+<div class="cta-band">
+  <div>
+    <div class="overline">Partner with Vlinder</div>
+    <h2 class="text-hero">Secure authenticity. Quantify carbon. Accelerate impact.</h2>
+    <p class="muted">Deploy a focused pilot in counterfeit hotspots with carbon insights at the product level.</p>
+    <div class="cta-actions">
+      <button class="btn-primary">Kick off Pilot</button>
+      <button class="btn-secondary">Schedule Working Session</button>
+    </div>
+  </div>
+  <div>
+    <div class="card">
+      <div class="eyebrow">Contacts</div>
+      <ul class="points-clean">
+        <li>Sales: sales@vlinder.one</li>
+        <li>Support: support@vlinder.one</li>
+        <li>Website: www.vlinder.one</li>
+      </ul>
+      <div class="muted small mt-4">Shell + Vlinder — Confidential • 2025</div>
     </div>
   </div>
 </div>
